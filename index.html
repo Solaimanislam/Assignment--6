@@ -26,7 +26,7 @@
 
 <body class="container mx-auto">
     <header>
-        <nav class="font-mulish">
+        <nav class="font-mulish lg:mt-10">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -41,13 +41,19 @@
                     </div>
                     <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
                 </div>
-                <div class="navbar-end hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a><img src="images/Frame 2.png" alt=""></a></li>
-                        <li><a><img src="images/Frame 3.png" alt=""></a></li>
-                        <li><a><img src="images/Frame 4.png" alt=""></a></li>
-                        <li><a><img src="images/Frame 5.png" alt=""></a></li>
-                    </ul>
+                <div class="navbar-end hidden lg:flex gap-4 lg:justify-end lg:ml-96 ">
+                    <div class="tooltip" data-tip="Home">
+                        <button class=""><img src="images/Frame 2.png" alt=""></button>
+                      </div>
+                      <div class="tooltip" data-tip="edit">
+                        <button class=""><img src="images/Frame 3.png" alt=""></button>
+                      </div>
+                      <div class="tooltip" data-tip="add">
+                        <button class=""><img src="images/Frame 4.png" alt=""></button>
+                      </div>
+                      <div class="tooltip" data-tip="icon">
+                        <button class=""><img src="images/Frame 5.png" alt=""></button>
+                      </div>
                 </div>
                 <div class="navbar-end ">
                     <a class="btn bg-[#797DFC] rounded-3xl text-white px-10 py-4">Sign In</a>
@@ -56,9 +62,9 @@
         </nav>
 
     </header>
-    <main>
+    <main class="container mx-auto">
         <!-- banner section -->
-        <section class="container mx-auto lg:px-20 px-2 lg:my-8 font-mulish bg-[url(images/bgbanner.png)] bg-[#12132D] bg-no-repeat bg-center rounded-3xl">
+        <section class="lg:px-20 px-2 lg:my-8 font-mulish bg-[url(images/bgbanner.png)] bg-[#12132D] bg-no-repeat bg-center rounded-3xl">
             <div class="flex justify-around">
                 <div class="space-y-2">
                     <h1 class=" text-white pt-4 text-5xl lg:text-6xl font-semibold lg:font-extrabold lg:pt-20">Wellcome to the 
@@ -89,6 +95,60 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+        <!-- Let’s Discuss -->
+        <section class="">
+            <div class="text-center mx-auto mb-12 mt-10 lg:mt-20">
+                <h1 class="text-4xl mb-2 font-extrabold">Let’s Discuss</h1>
+                <p class="text-lg text-[#03071299] p-3 lg:pt-6">Yes, you can run unit tests and view the results directly
+                    within the app. The <br> integrated testing features allow for streamlined.</p>
+            </div>
+            <div id="post-container" class="grid grid-cols-1 lg:grid-cols-2">
+                <div class=" justify-start ">
+                    <div class="flex gap-6 items-center lg:w-[600px] px-3 bg-base-200 rounded-2xl lg:mb-20 flex-col lg:flex-row">
+                        <div class="indicator ">
+                            <span class="indicator-item badge bg-green-400 rounded-full"></span> 
+                            <div class="grid w-32 h-32 bg-base-300 rounded-xl place-items-center">content</div>
+                          </div>
+                      <div>
+                        <div class="font-inter flex gap-8">
+                            <h6>#music</h6>
+                            <p>Author : Awlad Hossain</p>
+                        </div>
+                        <h1 class="text-xl font-bold">10 Kids Unaware of Their Halloween Costume</h1>
+                        <p class="py-6 font-inter">It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative.</p>
+                        <hr class="border-dashed text-xl mb-6">
+                        <div class="flex justify-between">
+                            <div class="flex gap-4">
+                                <div class="flex gap-4">
+                                    <img src="images/sms.png" alt="">
+                                    <p>560</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <img src="images/eye1.png" alt="">
+                                    <p>1568</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <img src="images/time.png" alt="">
+                                    <p>5min</p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="images/Vector.png" alt="">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="font-mulish flex lg:mx-28 bg-[#12132D0D] p-4 rounded-2xl justify-between">
+                    <h3 class="text-xl font-bold">Title</h3>
+                    <div class="flex gap-3">
+                        <img class="w-5 h-5" src="images/Frame.png" alt="">
+                        <p>Mark is red <span>(0)</span></p>
+                        
+                    </div>
+                  </div>
             </div>
         </section>
 
