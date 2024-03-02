@@ -8,37 +8,89 @@
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+        .font-mulish {
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
 </head>
 
 <body class="container mx-auto">
-    <header >
-        <nav>
+    <header>
+        <nav class="font-mulish">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+
                     </div>
-                   
-                  </div>
-                  <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+                    <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
                 </div>
                 <div class="navbar-end hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a><img src="images/Frame 2.png" alt=""></a></li>
-                    <li><a><img src="images/Frame 3.png" alt=""></a></li>
-                    <li><a><img src="images/Frame 4.png" alt=""></a></li>
-                    <li><a><img src="images/Frame 5.png" alt=""></a></li>
-                  </ul>
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a><img src="images/Frame 2.png" alt=""></a></li>
+                        <li><a><img src="images/Frame 3.png" alt=""></a></li>
+                        <li><a><img src="images/Frame 4.png" alt=""></a></li>
+                        <li><a><img src="images/Frame 5.png" alt=""></a></li>
+                    </ul>
                 </div>
                 <div class="navbar-end ">
-                  <a class="btn bg-[#797DFC] rounded-3xl text-white px-10 py-4">Sign In</a>
+                    <a class="btn bg-[#797DFC] rounded-3xl text-white px-10 py-4">Sign In</a>
                 </div>
-              </div>
+            </div>
         </nav>
 
     </header>
     <main>
+        <!-- banner section -->
+        <section class="container mx-auto lg:px-20 px-2 lg:my-8 font-mulish bg-[url(images/bgbanner.png)] bg-[#12132D] bg-no-repeat bg-center rounded-3xl">
+            <div class="flex justify-around">
+                <div class="space-y-2">
+                    <h1 class=" text-white pt-4 text-5xl lg:text-6xl font-semibold lg:font-extrabold lg:pt-20">Wellcome to the 
+                        <br><span class="text-[#797DFC] pt-4 lg:pt-10">ReTro </span>Forum
+                    </h1>
+                    <p class="text-lg font-medium text-white lg:pt-6">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                    <div>
+                        <input class="w-full m-4 p-4 rounded-3xl" type="text" placeholder="Search here anything">
+                        <button class="btn btn-primary rounded-3xl lg:-ml-32">Primary</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl space-y-5 py-5 lg:px-10 lg:my-28">
+                    <div class="flex gap-4 justify-between text-[#12132DCC]">
+                        <h2 class="font-medium text-2xl">Registered Users</h2>
+                        <p class="font-medium text-2xl">01</p>
+                    </div>
+                    <div class="flex justify-between text-[#12132DCC]">
+                        <h2 class="font-medium text-2xl">Forum</h2>
+                        <p class="font-medium text-2xl">05</p>
+                    </div>
+                    <div class="flex justify-between text-[#12132DCC]">
+                        <h2 class="font-medium text-2xl">Topics</h2>
+                        <p class="font-medium text-2xl">01</p>
+                    </div>
+                    <div class="flex justify-between text-[#12132DCC]">
+                        <h2 class="font-medium text-2xl">Replies</h2>
+                        <p class="font-medium text-2xl">01</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
     </main>
     <footer>
