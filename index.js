@@ -9,11 +9,24 @@ const searchPost = async (searchText) => {
 
 
 const handleSearch = () => {
+    loadingSpinnerShow(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
     loadPost(searchText);
+    searchField.value = '';
 }
+
+const loadingSpinnerShow = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if (isLoading) {
+        loadingSpinner.classList.remove('hidden');
+    }
+    else {
+        loadingSpinner.classList.add('hidden');
+    }
+}
+// setTimeout(loadingSpinnerShow, 2000);
 
 
 const loadPost = async (searchText) => {
@@ -26,18 +39,19 @@ const loadPost = async (searchText) => {
 }
 
 const displayPost = dPost => {
-   console.log(dPost);
-   const postContainer = document.getElementById('post-container');
-//    clear post container
-postContainer.textContent = '';
-   dPost.forEach(post => {
-    // console.log(post);
-    const div = document.createElement('div');
-    div.innerHTML = `
+    console.log(dPost);
+    const postContainer = document.getElementById('post-container');
+    //    clear post container
+    postContainer.textContent = '';
+    dPost.forEach(post => {
+        // console.log(post);
+
+        const div = document.createElement('div');
+        div.innerHTML = `
     <div class=" justify-start"> 
                         <div class="flex gap-6 items-center lg:w-[600px] px-3 bg-base-200 rounded-2xl lg:mb-20 flex-col lg:flex-row">
                             <div class="indicator ">
-                                <span class="indicator-item badge bg-green-400 rounded-full"></span> 
+                                <span class="indicator-item badge  rounded-full">${post.isActive == true?"bg-green":"bg-red"} </span> 
                                 <div class="grid w-32 h-32 bg-base-300 rounded-xl place-items-center"><img src="${post.image}" class=" rounded-xl" alt=""> </div>
                               </div>
                           <div>
@@ -64,20 +78,47 @@ postContainer.textContent = '';
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="images/Vector.png" alt="">
+                                <button onclick="btnClicked('${post.title.replace(/'/g," ")}', ${post.view_count})"><img src="images/Vector.png" alt=""></button>
                                 </div>
                             </div>
                           </div>
                         </div>
                       </div>
      `;
-     postContainer.appendChild(div);
-   })
+        postContainer.appendChild(div);
+
+    });
+    //    hide loading spinner
+    loadingSpinnerShow(false);
+
 }
 
+let count = 0;
+const btnClicked = async (title, views) => {
+    console.log('clicked');
+    console.log(title, views);
+    const postTitle = document.getElementById('post-title');
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class=" flex mb-4 p-3 bg-white rounded-xl justify-between">
+                                    <div>
+                                        <h4 class="font-semibold text-base">${title.replace('\'', '')}
+                                        </h4>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <img src="images/eye1.png" alt="">
+                                        <p>${views}</p>
+                                    </div>
+                                </div>
+    `;
+    postTitle.appendChild(div);
 
-const btnClick = async (titles, views) => {
-    console.log(titles, views);
+    // const markRead = title, views;
+    count++;
+    const postCount = document.getElementById('post-count');
+    postCount.innerText = count;
+
+
 }
 
 const latestPost = async () => {
