@@ -48,7 +48,7 @@ const displayPost = dPost => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-    <div class=" justify-start"> 
+    <div class=" justify-start mb-6 lg:m-0"> 
                         <div class="flex gap-6 items-center lg:w-[600px] px-3 bg-base-200 rounded-2xl lg:mb-20 flex-col lg:flex-row">
                             <div class="indicator ">
                                 <span class="indicator-item badge ${post.isActive == true?"bg-green-600":"bg-red-600"} rounded-full"> </span> 
@@ -61,9 +61,9 @@ const displayPost = dPost => {
                             </div>
                             <h1 class="text-xl font-bold">${post.title} </h1>
                             <p class="py-6 font-inter">${post.description} </p>
-                            <hr class="border-dashed text-xl mb-6">
+                            <hr class="border-dashed text-2xl mb-6 bg-slate-400">
                             <div class="flex justify-between">
-                                <div class="flex mb-6 gap-4">
+                                <div class="flex mb-6  lg:gap-4">
                                     <div class="flex gap-4">
                                         <img src="images/sms.png" alt="">
                                         <p>${post.comment_count} </p>
@@ -100,14 +100,14 @@ const btnClicked = async (title, views) => {
     const postTitle = document.getElementById('post-title');
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class=" flex mb-4 p-3 bg-white rounded-xl justify-between">
+    <div class=" flex mb-4 mx-2 p-3 bg-white rounded-xl justify-between">
                                     <div>
-                                        <h4 class="font-semibold text-base">${title}
+                                        <h4 class="font-semibold text-base lg:text-base">${title}
                                         </h4>
                                     </div>
-                                    <div class="flex gap-4">
+                                    <div class="flex items-center px-5 gap-1 lg:gap-4">
                                         <img src="images/eye1.png" alt="">
-                                        <p>${views}</p>
+                                        <p class=" text-base">${views}</p>
                                     </div>
                                 </div>
     `;
