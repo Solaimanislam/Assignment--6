@@ -51,7 +51,7 @@ const displayPost = dPost => {
     <div class=" justify-start"> 
                         <div class="flex gap-6 items-center lg:w-[600px] px-3 bg-base-200 rounded-2xl lg:mb-20 flex-col lg:flex-row">
                             <div class="indicator ">
-                                <span class="indicator-item badge  rounded-full">${post.isActive == true?"bg-green":"bg-red"} </span> 
+                                <span class="indicator-item badge ${post.isActive == true?"bg-green-600":"bg-red-600"} rounded-full"> </span> 
                                 <div class="grid w-32 h-32 bg-base-300 rounded-xl place-items-center"><img src="${post.image}" class=" rounded-xl" alt=""> </div>
                               </div>
                           <div>
@@ -102,7 +102,7 @@ const btnClicked = async (title, views) => {
     div.innerHTML = `
     <div class=" flex mb-4 p-3 bg-white rounded-xl justify-between">
                                     <div>
-                                        <h4 class="font-semibold text-base">${title.replace('\'', '')}
+                                        <h4 class="font-semibold text-base">${title}
                                         </h4>
                                     </div>
                                     <div class="flex gap-4">
